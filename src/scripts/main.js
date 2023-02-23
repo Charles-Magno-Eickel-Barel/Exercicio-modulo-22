@@ -15,10 +15,7 @@ const contaAsHoras = setInterval(function() {
     const horasAteOAniversario = Math.floor((distanciaAteAniversario % diaEmMs) / horaEmMs);
     const minutosAteOAniversario = Math.floor((distanciaAteAniversario % horaEmMs) / minutosEmMs);
     const segundosAteOAniversario = Math.floor((distanciaAteAniversario % minutosEmMs) / 1000);
-    console.log(diasAteOAniversario);
-    console.log(horasAteOAniversario);
-    console.log(minutosAteOAniversario);
-    console.log(segundosAteOAniversario);
+    
     document.getElementById('dias').innerHTML = `${diasAteOAniversario}`;
     document.getElementById('horas').innerHTML = `${horasAteOAniversario}`;
     document.getElementById('minutos').innerHTML = `${minutosAteOAniversario}`;
