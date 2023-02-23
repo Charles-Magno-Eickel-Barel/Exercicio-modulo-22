@@ -30,7 +30,7 @@ const contaAsHoras = setInterval(function() {
     document.getElementById('horas').innerHTML = '0';
     document.getElementById('minutos').innerHTML = '0';
     document.getElementById('segundos').innerHTML = '0';
-    document.getElementById('tempo').innerHTML = 'A data passou.';
+    document.getElementById('faltam').innerHTML = 'A data passou.';
     document.getElementById('tempo').innerHTML = 'Até o próximo ano!';
     }
 })
