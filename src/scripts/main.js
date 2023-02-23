@@ -1,0 +1,27 @@
+const dataDoAniversario = new Date("Nov 11, 2023 12:00:00");
+const timeStampDoAniversario = dataDoAniversario.getTime();
+
+const contaAsHoras = setInterval(function() {
+    const agora = new Date();
+    const timeStampAtual = agora.getTime();
+
+    const distanciaAteAniversario = timeStampDoAniversario - timeStampAtual;
+
+    const diaEmMs = 1000 * 60 * 60 * 24;
+    const horaEmMs = 1000 * 60 * 60;
+    const minutosEmMs = 1000 * 60;
+
+    const diasAteOAniversario = Math.floor(distanciaAteAniversario / diaEmMs);
+    const horasAteOAniversario = Math.floor((distanciaAteAniversario % diaEmMs) / horaEmMs);
+    const minutosAteOAniversario = Math.floor((distanciaAteAniversario % horaEmMs) / minutosEmMs);
+    const segundosAteOAniversario = Math.floor((distanciaAteAniversario % minutosEmMs) / 1000);
+    console.log(diasAteOAniversario);
+    console.log(horasAteOAniversario);
+    console.log(minutosAteOAniversario);
+    console.log(segundosAteOAniversario);
+    document.getElementById('dias').innerHTML = `${diasAteOAniversario}`;
+    document.getElementById('horas').innerHTML = `${horasAteOAniversario}`;
+    document.getElementById('minutos').innerHTML = `${minutosAteOAniversario}`;
+    document.getElementById('segundos').innerHTML = `${segundosAteOAniversario}`;
+})
+
