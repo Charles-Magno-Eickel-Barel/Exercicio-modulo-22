@@ -1,4 +1,4 @@
-const dataDoAniversario = new Date("Nov 11, 2022 12:00:00");
+const dataDoAniversario = new Date("Nov 11, 2023 12:00:00");
 const timeStampDoAniversario = dataDoAniversario.getTime();
 
 const contaAsHoras = setInterval(function() {
