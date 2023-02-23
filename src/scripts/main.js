@@ -1,4 +1,4 @@
-const dataDoAniversario = new Date("Nov 11, 2023 12:00:00");
+const dataDoAniversario = new Date("Nov 11, 2022 12:00:00");
 const timeStampDoAniversario = dataDoAniversario.getTime();
 
 const contaAsHoras = setInterval(function() {
@@ -23,5 +23,14 @@ const contaAsHoras = setInterval(function() {
     document.getElementById('horas').innerHTML = `${horasAteOAniversario}`;
     document.getElementById('minutos').innerHTML = `${minutosAteOAniversario}`;
     document.getElementById('segundos').innerHTML = `${segundosAteOAniversario}`;
+
+    if (distanciaAteAniversario < 0) {
+        clearInterval(contaAsHoras);
+        document.getElementById('dias').innerHTML = '0';
+    document.getElementById('horas').innerHTML = '0';
+    document.getElementById('minutos').innerHTML = '0';
+    document.getElementById('segundos').innerHTML = '0';
+    document.getElementById('tempo').innerHTML = 'A data passou. Até o próximo ano!'
+    }
 })
 
